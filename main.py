@@ -11,7 +11,7 @@ while True:
     [print('It is', datetime.datetime.now().strftime("%H:%M")) for i in time if stdin == i]
     [print('Today is', datetime.datetime.now().strftime("%d %B of %y")) for i in date if stdin == i]
     [[print('No problem!'), os.system('firefox')] for i in firefox if stdin == i]
-    [os.system('clear') if stdin == 'clear' or 'cls' else None]
+    [os.system('clear') if stdin == 'clear' or stdin == 'cls' else None]
     if stdin == 'exit':
         break
     if stdin == 'calc':
