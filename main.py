@@ -1,7 +1,7 @@
 import datetime
 import os
 import json
-
+from subprocess import call
 with open("keywords.json", "r") as jf:
     js = json.load(jf)
 
@@ -17,10 +17,4 @@ while True: # main cycle
         print("byeee")
         break
     if stdin == 'calc':
-        print('entered the calc mode')
-        print('to exit type "exit"')
-        while True:
-            stdinCalc = input("(calc)--> ")
-            if stdinCalc == 'exit':
-                print('U went to the regural mode')
-                break
+        call(["python", "calc.py"])
