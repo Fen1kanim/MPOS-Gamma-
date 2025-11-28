@@ -10,7 +10,7 @@ print()
 
 while True: # main cycle
     stdin = input("--> ")
-    [call(["python", "help.py"]) if stdin == 'help' else None]
+    [call(["python", "./python/help.py"]) if stdin == 'help' else None]
     [print('Hi! How r u?') for i in js["hi"] if stdin == i] # hi
     [print('It is', datetime.datetime.now().strftime("%H:%M")) for i in js["time"] if stdin == i] # time
     [print('Today is', datetime.datetime.now().strftime("%d %B of %y")) for i in js["date"] if stdin == i] # date
@@ -21,4 +21,4 @@ while True: # main cycle
         print("byeee")
         break
     if stdin == 'calc':
-        call(["python", "calc.py"])
+        call(["python", "./python/calc.py"])
