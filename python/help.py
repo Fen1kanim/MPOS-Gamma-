@@ -7,5 +7,6 @@ calc - open simple calculator
 exit - exit
 clear, cls - clear terminal
 help - list commands, you use it right now
-hi - just say hi! Be polite, i spend 3 days for this shit''')
+hi - just say hi! Be polite, i spend 3 days for this shit
+open - types a command to terminal''')
 print()
