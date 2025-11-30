@@ -5,7 +5,7 @@ from subprocess import call
 with open("keywords.json", "r") as jf:
     js = json.load(jf)
 
-call(["python", "./authentification"])
+call(["python", "./authentification/request.py"])
 
 print("print help to list comands")
 print()
