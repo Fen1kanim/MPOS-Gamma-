@@ -1,10 +1,10 @@
 from subprocess import call
 
-print('''1) add new user
+print('''0) add new user
 1) authentificate
 ''')
 
-choose = input('choose something(0,1): ')
+choose = input('choose something(01): ')
 
 if choose == '0':
     call(['python', './authentification/add.py'])

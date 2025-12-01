@@ -14,8 +14,8 @@ if name in users:
     if password == users[name]['password']:
         print('you are as', name, 'authentificated')
         print()
-        del lastUser["last"]
-        lastUser["last"] = {"name": name}
+        del lastUser["name"]
+        lastUser["name"] = name
         with open('./authentification/lastUser.json', 'w') as js:
             json.dump(lastUser, js, indent = 4)
     else:

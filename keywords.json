@@ -36,5 +36,10 @@
         "open",
         "open a prog",
         "open a programm"
+    ],
+    "calc": [
+        "calc",
+        "open a calc",
+        "open a calculator"
     ]
 }
