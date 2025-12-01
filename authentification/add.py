@@ -15,8 +15,8 @@ print('''0) Unix (Linux, Macos)
 os = input('choose your operation system(01): ')
 if os == '1' or os == '0':
     users[name] = {"password": password, "os": os}
-    del lastUser["last"]
-    lastUser["last"] = {"name": name}
+    del lastUser["name"]
+    lastUser["name"] = name
 else:
     print("try again")
     call(['python', './authentification/add.py'])
