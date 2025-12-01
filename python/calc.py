@@ -11,8 +11,10 @@ elif op == '*':
 elif op == '-':
     an = float(nr1) - float(nr2)
 elif op == '/':
-    if float(nr1) == 0.0 or float(nr2) == 0.0:
+    if float(nr1) != 0.0 or float(nr2) != 0.0:
         an = float(nr1) / float(nr2)
+    else:
+        err = True
 else:
     err = True
 
