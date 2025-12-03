@@ -41,5 +41,10 @@
         "calc",
         "open a calc",
         "open a calculator"
+    ],
+    "delete": [
+        "delete",
+        "delete my account",
+        "delete account"
     ]
 }
