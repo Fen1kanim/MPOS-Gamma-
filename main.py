@@ -33,9 +33,8 @@ while True: # main cycle
     [call(['python', './python/delete.py']) for i in keywords["delete"] if stdin == i]
 
     [print('Today is', datetime.datetime.now().strftime("%d %B of %y")) for i in keywords["date"] if stdin == i] # date
-                                                                # clear 0/1
-    [os.system('clear') if users[lastUser["name"]]["os"] == '0'\
-    else None if stdin == 'clear' or stdin == 'cls' else None] # clear 1/1
+
+    [os.system('clear') if stdin == 'clear' or stdin == 'cls' else None]
 
     [call(["python", "./python/open.py"]) for i in keywords["open"] if stdin == i] # open
 
