@@ -1,8 +1,9 @@
 from subprocess import call
 
 # the main programm opens
+call(["python", './authentification/request.py'])
+
 print("print help to list comands")
 print()
 
-while True: # main cycle
-    call(['python', './python/request.py'])
+call(['python', './python/keywordRequest.py'])
