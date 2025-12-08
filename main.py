@@ -6,4 +6,4 @@ call(["python", './authentification/request.py'])
 print("print help to list comands")
 print()
 
-call(['python', './python/keywordRequest.py'])
+call(['python', './keywords/keywordRequest.py'])
