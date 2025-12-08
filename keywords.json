@@ -46,5 +46,10 @@
         "delete",
         "delete my account",
         "delete account"
+    ],
+    "clear": [
+        "clear",
+        "cls",
+        "clear terminal"
     ]
 }
