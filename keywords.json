@@ -76,5 +76,11 @@
     "random": [
         "random",
         "rndm"
+    ],
+    "doom": [
+        "doom"
+    ],
+    "pong": [
+        "pong"
     ]
 }
