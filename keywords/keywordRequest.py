@@ -25,13 +25,9 @@ def osTest():
 while True:
     stdin = input("--> ") # as user for any commands
 
-    #[call(["python", "./keywords/pong.py"]) for i in keywords["pong"] if stdin == i] # doom
-
-    [call(["python", "./keywords/ascii_doom.py"]) for i in keywords["doom"] if stdin == i] # doom
+    [call(["python", "./keywords/games/menu.py"]) for i in keywords["game"] if stdin == i] # game
 
     [call(["python", "./keywords/uranium.py"]) for i in keywords["uranium"] if stdin == i] # uranium
-
-    [call(["python", "./keywords/randon.py"]) for i in keywords["random"] if stdin == i] # random
 
     [call(["python", "./keywords/help.py"]) for i in keywords["help"] if stdin == i] # help
 
@@ -54,14 +50,3 @@ while True:
     if stdin == 'exit': # exit to terminal
         print("byeee")
         break
-
-    parts = stdin.split()
-    cmd = parts[0].lower()
-    args = parts[1:]  # everything after the command
-
-    # check if command is in keywords["pong"]
-    if cmd in keywords["pong"]:
-        # call pong.py with optional args
-        command = ["python", "./keywords/pong.py"] + args
-        call(command)
-
