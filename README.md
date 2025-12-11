@@ -1,5 +1,7 @@
 MPOS - mini python operation system
 
+ATTENTION! only works on Linux
+
 It is just some comands it can answer.
 Nothing but a simple python project, I made for fun.
 
@@ -9,7 +11,3 @@ In keywords directory are all keywords, wich code is longer then one line.
 In ./keywords/keywordRequest.py are all keywords that are one line long.
 
 just run main.py, and it gonna work. I hope.
-
------------------------------------------------------------
-
-this project requires the curses module
