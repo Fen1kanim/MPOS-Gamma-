@@ -6,17 +6,20 @@ with open('./authentification/users.json', 'r') as js:
 with open('./authentification/lastUser.json', 'r') as js:
     lastUser = json.load(js)
 
-name = input('username: ')
+name = input('\nusername: ')
 password = input('password: ')
-print('''0) Unix (Linux, Macos)
+os = input('''0) Unix (Linux, Macos)
 1) Windows
-''')
 
-os = input('choose your operation system(01): ')
-if os == '1' or os == '0':
+choose your operation system(01): ''')
+
+if os == '0':
     users[name] = {"password": password, "os": os}
     del lastUser["name"]
     lastUser["name"] = name
+elif os == '1':
+    print("you are an idiot, that can`t use a computer\ntry again")
+    call(['python', './authentification/add.py'])
 else:
     print("try again")
     call(['python', './authentification/add.py'])
