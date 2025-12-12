@@ -11,16 +11,6 @@ with open('./authentification/lastUser.json', 'r') as js:
 with open('./authentification/users.json', 'r') as js:
     users = json.load(js)
 
-#ask users OS
-def osTest():
-    os = users[lastUser["name"]]["os"]
-    if os == "1":
-        system = False
-        return system
-    if os == "0":
-        system = True
-        return system
-
 #main loop
 while True:
     stdin = input("--> ") # as user for any commands
@@ -41,7 +31,7 @@ while True:
 
     [print('Today is', datetime.datetime.now().strftime("%d %B of %y")) for i in keywords["date"] if stdin == i] # date
 
-    [os.system('clear') if osTest() == True else os.system('cls') for i in keywords["clear"] if stdin == i] # clear
+    [os.system('clear') for i in keywords["clear"] if stdin == i] # clear
 
     [call(["python", "./keywords/open.py"]) for i in keywords["open"] if stdin == i] # open
 
