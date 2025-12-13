@@ -7,7 +7,7 @@ stdin = input('''
 4. rock paper scissors
 5. snake
 6. tic tac toe
-7. flappy birdo
+7. flappy bird
 
 choose a game(1234567): ''')
 
