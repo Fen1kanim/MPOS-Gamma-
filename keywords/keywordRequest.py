@@ -15,27 +15,27 @@ with open('./authentification/users.json', 'r') as js:
 while True:
     stdin = input("--> ") # as user for any commands
 
-    [call(["python", "./keywords/games/menu.py"]) for i in keywords["game"] if stdin == i] # game
+    call(["python", "./keywords/games/menu.py"]) if stdin in keywords["game"] else None # game
 
-    [call(["python", "./keywords/uranium.py"]) for i in keywords["uranium"] if stdin == i] # uranium
+    call(["python", "./keywords/uranium.py"]) if stdin in keywords['uranium'] else None # uranium
 
-    [call(["python", "./keywords/help.py"]) for i in keywords["help"] if stdin == i] # help
+    call(["python", "./keywords/help.py"])  if stdin in keywords['help'] else None # help
 
-    [print('you are as', lastUser["name"], 'authorized') for i in keywords["whoami"] if stdin == i] # whoami
+    print('you are as', lastUser["name"], 'authorized') if stdin in keywords['whoami'] else None # whoami
 
-    [print('Hi! How r u?') for i in keywords["hi"] if stdin == i] # hi
+    print('Hi! How r u?')  if stdin in keywords['hi'] else None # hi
 
-    [print('It is', datetime.datetime.now().strftime("%H:%M")) for i in keywords["time"] if stdin == i] # time
+    print('It is', datetime.datetime.now().strftime("%H:%M")) if stdin in keywords['time'] else None # time
 
-    [call(['python', './keywords/delete.py']) for i in keywords["delete"] if stdin == i] # delete account
+    call(['python', './keywords/delete.py']) if stdin in keywords['delete'] else None # delete account
 
-    [print('Today is', datetime.datetime.now().strftime("%d %B of %y")) for i in keywords["date"] if stdin == i] # date
+    print('Today is', datetime.datetime.now().strftime("%d %B of %y")) if stdin in keywords['date'] else None # date
 
-    [os.system('clear') for i in keywords["clear"] if stdin == i] # clear
+    os.system('clear') if stdin in keywords['clear'] else None # clear
 
-    [call(["python", "./keywords/open.py"]) for i in keywords["open"] if stdin == i] # open
+    call(["python", "./keywords/open.py"]) if stdin in keywords['open'] else None # open
 
-    [call(["python", "./keywords/calc.py"]) for i in keywords["calc"] if stdin == i] # calc
+    call(["python", "./keywords/calc.py"]) if stdin in keywords['calc'] else None # calc
 
     if stdin == 'exit': # exit to terminal
         print("byeee")
