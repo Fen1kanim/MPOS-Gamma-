@@ -37,6 +37,20 @@ while True:
 
     call(["python", "./keywords/calc.py"]) if stdin in keywords['calc'] else None # calc
 
+    if stdin not in keywords['game'] \
+    and stdin not in keywords['uranium'] \
+    and stdin not in keywords['help'] \
+    and stdin not in keywords['whoami'] \
+    and stdin not in keywords['hi'] \
+    and stdin not in keywords['time'] \
+    and stdin not in keywords['delete'] \
+    and stdin not in keywords['date'] \
+    and stdin not in keywords['clear'] \
+    and stdin not in keywords['open'] \
+    and stdin not in keywords['calc'] \
+    and stdin != 'exit':
+        print('sorry, unknown command\ntry again')
+
     if stdin == 'exit': # exit to terminal
         print("byeee")
         break
