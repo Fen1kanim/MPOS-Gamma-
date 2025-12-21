@@ -54,7 +54,7 @@ In the games directory are all games, include the menu.
 
 ## How to add a new keyword
 
-To add a new command you have to initializate it in the *keywords.json* database  
+To add a new command you have to add it in the *keywords.json* database  
   
 after that you have to initialize it in keywords/keywordsRequest.py like this:  
 **call(["python", "./keywords/command.py\"\]) if stdin in keywords["command\"\] else None**  
