@@ -51,3 +51,20 @@ In keywordsRequest are all keywords initialazed.
 #### ./keywords/games
 
 In the games directory are all games, include the menu.
+
+## How to add a new keyword
+
+To add a new command you have to initializate it in the *keywords.json* database  
+  
+after that you have to initialize it in keywords/keywordsRequest.py like this:  
+**call(["python", "./keywords/command.py\"\]) if stdin in keywords["command\"\] else None**  
+(replace command with your keyword)  
+
+add a python file to *keywords/*, with the functionality of your keyword.  
+Oh, and don`t forget to add your keywords to a known keywords in *\./keywords/keywordRequest.py* like this:  
+**if stdin not in keywords['game'\] \\
+  and stdin not in keywords['command'\] \\
+  and stdin != 'exit':
+      print('sorry, unknown command\ntry again')**
+
+And if you`ve done everything corectly, there will be a new command!
