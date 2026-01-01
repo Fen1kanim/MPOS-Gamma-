@@ -13,9 +13,7 @@ def keywords(name):
     #import databases
     with open('keywords.json', 'r') as js:
         keywords = json.load(js)
-    with open('./authentification/lastUser.json', 'r') as js:
-        lastUser = json.load(js)
-    with open('./authentification/users.json', 'r') as js:
+    with open('./auth/users.json', 'r') as js:
         users = json.load(js)
 
     #main loop
@@ -56,9 +54,12 @@ def keywords(name):
         and stdin not in keywords['clear'] \
         and stdin not in keywords['open'] \
         and stdin not in keywords['calc'] \
+        and stdin != 'reboot' \
         and stdin != 'exit':
             print('sorry, unknown command\ntry again')
+        
+        if stdin == 'reboot': # reboot
+            return 'r'
 
-        if stdin == 'exit': # exit to terminal
-            print("byeee")
-            break
+        if stdin == 'exit': # exit
+            return 'e'
